@@ -51,11 +51,11 @@ steps:
      sonar.exclusions=**/wwwroot/lib/**/*
     condition: |
       and
-  (
-    succeeded(),
-    eq(variables['Build.Reason'], 'PullRequest'),
-    eq(variables['System.PullRequest.TargetBranch'], 'master')
-  )
+    (
+      succeeded(),
+      eq(variables['Build.Reason'], 'PullRequest'),
+      eq(variables['System.PullRequest.TargetBranch'], 'master')
+    )
 
 - task: DotNetCoreCLI@2
   displayName: 'Build the project - $(buildConfiguration)'
