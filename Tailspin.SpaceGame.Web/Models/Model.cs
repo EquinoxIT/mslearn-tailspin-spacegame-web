@@ -4,6 +4,7 @@ namespace TailSpin.SpaceGame.Web.Models
 {
     /// <summary>
     /// Base class for data models.
+    /// This is a test
     /// </summary>
     public abstract class Model
     {
