@@ -1,0 +1,7 @@
+“
+TailSpin.SpaceGame.Web.Startupobject—
+:Startup(Microsoft.Extensions.Configuration.IConfiguration)YTailSpin.SpaceGame.Web.Startup.Startup(Microsoft.Extensions.Configuration.IConfiguration)¿
+NConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)mTailSpin.SpaceGame.Web.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)þ
+mConfigure(Microsoft.AspNetCore.Builder.IApplicationBuilder, Microsoft.AspNetCore.Hosting.IHostingEnvironment)ŒTailSpin.SpaceGame.Web.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder, Microsoft.AspNetCore.Hosting.IHostingEnvironment)E
+Configuration.get0TailSpin.SpaceGame.Web.Startup.Configuration.getE
+Configuration.set0TailSpin.SpaceGame.Web.Startup.Configuration.set
