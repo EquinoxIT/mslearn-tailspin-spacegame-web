@@ -1,0 +1,7 @@
+organization=frostmotorsport
+projectKey=frostmotorsport_mslearn-tailspin-spacegame-web
+serverUrl=https://sonarcloud.io
+serverVersion=8.0.0.102
+dashboardUrl=https://sonarcloud.io/dashboard?id=frostmotorsport_mslearn-tailspin-spacegame-web
+ceTaskId=AWw8FtD1PS6D7aEGyacT
+ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AWw8FtD1PS6D7aEGyacT
