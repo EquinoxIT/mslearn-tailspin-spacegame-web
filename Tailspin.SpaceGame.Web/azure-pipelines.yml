@@ -7,20 +7,10 @@ variables:
   buildConfiguration: 'Release'
   wwwrootDir: 'Tailspin.SpaceGame.Web/wwwroot'
   dotnetSdkVersion: '2.1.505'
-<<<<<<< HEAD
 
 steps:
 - task: DotNetCoreInstaller@0
   displayName: 'Use .NET Core SDK $(dotnetSdkVersion)'
-=======
-  organization: 'frostmotorsport'
-  projectKey: 'frostmotorsport_mslearn-tailspin-spacegame-web'
-  ProjectName: 'mslearn-tailspin-spacegame-web'
-
-steps:
-- task: DotNetCoreInstaller@0
-  displayName: 'Use .NETCore SDK $(dotnetSdkVersion)'
->>>>>>> master
   inputs:
     version: '$(dotnetSdkVersion)'
 
@@ -45,28 +35,18 @@ steps:
     command: 'restore'
     projects: '**/*.csproj'
 
-<<<<<<< HEAD
-=======
 - task: SonarCloudPrepare@1
   displayName: 'Prepare SonarCloud analysis'
   inputs:
     SonarCloud: 'SpaceGame - SonarCloud SVC_C'
     organization: '$(organization)'
     projectKey: '$(projectKey)'
-    projectName: '$(ProjectName)'
+    projectName: 'SpaceGame - Web - Pipeline'
     projectVersion: '$(Build.BuildNumber)'
     extraProperties: |
      sonar.cs.opencover.reportsPaths=$(Build.SourcesDirectory)/TestResults/Coverage/coverage.opencover.xml
      sonar.exclusions=**/wwwroot/lib/**/*
-    condition: |
-      and
-    (
-      succeeded(),
-      eq(variables['Build.Reason'], 'PullRequest'),
-      eq(variables['System.PullRequest.TargetBranch'], 'master')
-    )
 
->>>>>>> master
 - task: DotNetCoreCLI@2
   displayName: 'Build the project - $(buildConfiguration)'
   inputs:
@@ -75,8 +55,6 @@ steps:
     projects: '**/*.csproj'
 
 - task: DotNetCoreCLI@2
-<<<<<<< HEAD
-=======
   displayName: 'Install ReportGenerator'
   inputs:
     command: custom
@@ -97,23 +75,9 @@ steps:
 
 - task: SonarCloudAnalyze@1
   displayName: 'Run SonarCloud code analysis'
-  condition: |
-    and
-  (
-    succeeded(),
-    eq(variables['Build.Reason'], 'PullRequest'),
-    eq(variables['System.PullRequest.TargetBranch'], 'master')
-  )
 
 - task: SonarCloudPublish@1
   displayName: 'Publish SonarCloud quality gate results'
-  condition: |
-    and
-  (
-    succeeded(),
-    eq(variables['Build.Reason'], 'PullRequest'),
-    eq(variables['System.PullRequest.TargetBranch'], 'master')
-  )
 
 - task: PublishCodeCoverageResults@1
   displayName: 'Publish code coverage report'
@@ -122,7 +86,6 @@ steps:
     summaryFileLocation: '$(Build.SourcesDirectory)/**/coverage.cobertura.xml'
 
 - task: DotNetCoreCLI@2
->>>>>>> master
   displayName: 'Publish the project - $(buildConfiguration)'
   inputs:
     command: 'publish'

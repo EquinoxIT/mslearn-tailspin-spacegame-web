@@ -1,3 +1,4 @@
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=frostmotorsport_mslearn-tailspin-spacegame-web&metric=alert_status)](https://sonarcloud.io/dashboard?id=frostmotorsport_mslearn-tailspin-spacegame-web)
 
 # Contributing
 
